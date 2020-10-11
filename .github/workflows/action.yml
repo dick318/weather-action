@@ -15,9 +15,11 @@ jobs:
         run: bash ./weather.sh
       - name: 'Get Date'
         run: echo "::set-env name=REPORT_DATE::$(TZ=':Asia/Shanghai' date '+%Y-%m-%d')"
+      - name: 'Get Content'
+        run: echo "::set-env name=Content::$(`cat file://result.html`)"
       - name: Sending message
         uses: yakumioto/serverchan-action@v1
         with:
           key: ${{ secrets.sckey }}
           text: 深圳天气预报 ${{env.REPORT_DATE}}
-          desp: file://result.html
+          desp: ${{env.Content}}
