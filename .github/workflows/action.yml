@@ -19,5 +19,5 @@ jobs:
         uses: yakumioto/serverchan-action@v1
         with:
           key: ${{ secrets.sckey }}
-          text: 消息标题
+          text: 深圳天气预报 ${{env.REPORT_DATE}}
           desp: 消息内容
