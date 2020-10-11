@@ -20,4 +20,4 @@ jobs:
         with:
           key: ${{ secrets.sckey }}
           text: 深圳天气预报 ${{env.REPORT_DATE}}
-          desp: ${{file://result.html}}
+          desp: file://result.html
