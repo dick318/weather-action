@@ -16,7 +16,7 @@ jobs:
       - name: 'Get Date'
         run: echo "::set-env name=REPORT_DATE::$(TZ=':Asia/Shanghai' date '+%Y-%m-%d')"
       - name: 'Get Content'
-        run: echo "::set-env name=Content::`cat file://result.html`"
+        run: echo "::set-env name=Content::`cat result.html`"
       - name: Sending message
         uses: yakumioto/serverchan-action@v1
         with:
