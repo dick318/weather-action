@@ -3,7 +3,7 @@ name: 'GitHub Actions Weather Bot'
 on:
   push:
   schedule:
-    - cron: '32 19 * * *'
+    - cron: '37 19 * * *'
 
 jobs:
   bot:
@@ -19,5 +19,5 @@ jobs:
         uses: yakumioto/serverchan-action@v1
         with:
           key: ${{ secrets.sckey }}
-          text: 深圳天气预报 (${{env.REPORT_DATE}})
-          desp: file://result.html
+          text: 消息标题
+          desp: 消息内容
